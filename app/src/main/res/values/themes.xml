@@ -4,6 +4,5 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
-
-    <style name="Theme.MeterialTest" parent="Base.Theme.MeterialTest" />
+    <style name="Theme.MeterialTest" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
 </resources>
