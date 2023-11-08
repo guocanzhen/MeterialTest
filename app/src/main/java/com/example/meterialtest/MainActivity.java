@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
         }
         FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(v -> {
-            Toast.makeText(this, "Fab clicked", Toast.LENGTH_SHORT).show();
-        });
+        fab.setOnClickListener(v ->
+                Snackbar.make(v, "Data delete", Snackbar.LENGTH_SHORT).setAction("Undo",
+                        v1 -> Toast.makeText(this, "Data restore", Toast.LENGTH_SHORT).show()).show());
     }
 
     @Override
